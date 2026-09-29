@@ -5,12 +5,19 @@ import edu.princeton.cs.algs4.In;
 
 
 public class ThreeSum {
-
+67
     // Count triples that sum to 0 (brute force O(n^3))
     public static int count(int[] a) {
 
         int count = 0;
-        //TODO: Finish THreeSum
+        for (int i = 0; i < a.length-2; i++){
+            for (int j = i+1; j < a.length-1; j++){
+                for (int k = j+1; k < a.length; k++){
+                    if (a[i] + a[j] + a[k] == 0){ count++; System.out.println(a[i] + " " + a[j] + " " + a[k]);}
+                }
+            }
+        }
+
 
         return count;
     }
